@@ -1,0 +1,5 @@
+Conversão do XML para JSON
+1 – Ajustar os XML para validos, o Menu em questão estão OK, porém podemos ter problemas com os demais XML;
+•	Utilização do Swagger Editor para geração/conversão do JSON;
+•	Sistema desenvolvido interno;
+2 – Necessidade de uma máquina com MongoDB/ASPNETCore para desenvolvimento da API e publicação.
