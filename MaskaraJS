@@ -1,0 +1,32 @@
+$scope.mascara = function(param){
+
+                //var exp = /\-|\.|\:|\,|\/|\(|\)| /g
+                //var campoSoNumeros = param.replace(exp, "");
+
+                var decimal = param.substring(param.length - 2);
+                var inteiro = param.substring(param.length - 2, - 3) * 1;
+                
+                var count = 0;
+                var novoValor = teste =  "";
+                novoValor = inteiro;
+                for (var i=inteiro.toString().length; i >= 0 ; i--){
+
+                    if(count < 3 || i < 1){
+                        //novoValor += inteiro.charAt(i);
+                        //count ++;
+                    }   else {
+                        novoValor = novoValor.toString().slice(0, i) + "." + novoValor.toString().slice(i);  
+                        count = 0;
+                    } 
+
+                    count ++;
+                }
+
+                //alert(novoValor.length);
+                // for(var i=0; i < novoValor.length ; i++){
+                //     teste += novoValor.substr(novoValor.length - i, 1);
+                // }
+
+                return (novoValor  + "," +decimal);
+
+            }
