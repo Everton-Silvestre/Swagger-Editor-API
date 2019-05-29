@@ -1,0 +1,18 @@
+ using (StreamReader r = new StreamReader("../../Catalogo_Teste/Catalogo_Teste/menu.json"))
+            {
+
+                var json = r.ReadToEnd();
+                Rootobject items = JsonConvert.DeserializeObject<Rootobject>(json);
+
+                var x = items.menu.items.Where(y => y.id == model);
+
+                if (x.Count() > 0)
+                {
+                    return Ok(x);
+                }
+                else
+                {
+                    return BadRequest();
+                }
+
+            }
